@@ -1,0 +1,8 @@
+version: '3'
+services:
+  frontend:
+    build: .
+    volumes:
+      - .dockervenv:/frontend/.venv
+      - .:/frontend
+    entrypoint: tail -f /dev/null
